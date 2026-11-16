@@ -1,0 +1,15 @@
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\bin\Debug\net10.0\FishingInTerminal.exe
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\bin\Debug\net10.0\FishingInTerminal.deps.json
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\bin\Debug\net10.0\FishingInTerminal.runtimeconfig.json
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\bin\Debug\net10.0\FishingInTerminal.dll
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\bin\Debug\net10.0\FishingInTerminal.pdb
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.GeneratedMSBuildEditorConfig.editorconfig
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.AssemblyInfoInputs.cache
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.AssemblyInfo.cs
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.csproj.CoreCompileInputs.cache
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.sourcelink.json
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.dll
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\refint\FishingInTerminal.dll
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.pdb
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\FishingInTerminal.genruntimeconfig.cache
+D:\DEV\CSharp\FishingInTerminal\FishingInTerminal\FishingInTerminal\obj\Debug\net10.0\ref\FishingInTerminal.dll
