@@ -24,36 +24,49 @@ class Program
             {
                 case 1:
                 {
+                    Boolean fisk = true;
+                    while (fisk)
+                    {
+                        Random rnd = new Random();
+                        int tilfeldig = rnd.Next(fiskeArter.Count);
+                        string valgtFisk = fiskeArter[tilfeldig];
+        
+                        Console.WriteLine("### For å fiske Skriv: fisk ###");
+                        string? input = Console.ReadLine().ToLower();
+                    
+                        int Num = rnd.Next(1, 3);
+                        if (input == "fisk" && Num%2 == 0)
+                        {
+            
+            
+                            Console.WriteLine("#############################\n" +
+                                              $"Du fikk en {valgtFisk}!\n" +
+                                              "#############################");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Du fikk ingenting!");
+                        }
+                    }
                     break;
-                }    
+                }
+                case 2:
+                {
+                    break;
+                }
+                case 3:
+                {
+                    kjorer = false;
+                    break;
+                }
             }
-        }
-        
-        int tilfeldigFisk = Random.Shared.Next(fiskeArter.Count);
-        string valgtFisk = fiskeArter[tilfeldigFisk];
-        
-        Console.WriteLine("### For å fiske Skriv: fisk ###");
-        string? input = Console.ReadLine().ToLower();
-
-        Random rnd = new Random();
-        int Num = rnd.Next(1, 3);
-        if (input == "fisk" && Num%2 == 0)
-        {
-            
-            
-            Console.WriteLine("#############################\n" +
-                              $"Du fikk en {valgtFisk} fisk!\n" +
-                              "#############################");
-        }
-        else
-        {
-            Console.WriteLine("Du fikk ingenting!");
         }
         
     }  
     public static void printMenu()
     {
         Console.WriteLine("1. fisk \n" +
-                          "2. Se i sekken");
+                          "2. Se i sekken \n" +
+                          "3. Avslutt");
     }
 }
