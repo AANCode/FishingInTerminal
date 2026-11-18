@@ -27,7 +27,8 @@ class Program
                     String reader = "";
                     while (reader != "ut")
                     {
-                        Console.Write("***For å fiske skriv: fisk  |  For å gå tilbake skriv: ut***: ");
+                        Console.WriteLine("For å fiske skriv -> fisk \n" +
+                                      "For å gå tilbake skriv -> ut: ");
                         reader = Console.ReadLine();
                         if (reader.ToLower() == "fisk" )
                         {
