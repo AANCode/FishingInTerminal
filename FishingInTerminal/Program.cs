@@ -24,29 +24,32 @@ class Program
             {
                 case 1:
                 {
-                    Boolean fisk = true;
-                    while (fisk)
+                    String reader = "";
+                    while (reader != "ut")
                     {
-                        Random rnd = new Random();
-                        int tilfeldig = rnd.Next(fiskeArter.Count);
-                        string valgtFisk = fiskeArter[tilfeldig];
-        
-                        Console.WriteLine("### For å fiske Skriv: fisk ###");
-                        string? input = Console.ReadLine().ToLower();
+                        Console.Write("***For å fiske skriv: fisk  |  For å gå tilbake skriv: ut***: ");
+                        reader = Console.ReadLine();
+                        if (reader.ToLower() == "fisk" )
+                        {
+                            Random rnd = new Random();
+                            int tilfeldig = rnd.Next(fiskeArter.Count);
+                            string valgtFisk = fiskeArter[tilfeldig];
                     
-                        int Num = rnd.Next(1, 3);
-                        if (input == "fisk" && Num%2 == 0)
-                        {
-            
-            
-                            Console.WriteLine("#############################\n" +
-                                              $"Du fikk en {valgtFisk}!\n" +
-                                              "#############################");
+                            int Num = rnd.Next(1, 3);
+                            if (Num%2 == 0)
+                            {
+                                Console.WriteLine($"*Du fikk en {valgtFisk}!*");
+                            }
+                            else
+                            {
+                                Console.WriteLine("*Du fikk ingenting!*");
+                            }
                         }
-                        else
+                        else if (reader.ToLower() == "ut")
                         {
-                            Console.WriteLine("Du fikk ingenting!");
+                            reader = "ut";
                         }
+                        
                     }
                     break;
                 }
