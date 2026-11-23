@@ -1,19 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using FishingInTerminal;
 
 class Program
 {
     
     static void Main(String[] args)
     {
-        List<String> fiskeArter = new List<String>()
-        {
-            "Salmon",
-            "Bass",
-            "Tuna"
-        };
-        
-        
         Boolean kjorer = true;
         while (kjorer)
         {
@@ -24,34 +15,7 @@ class Program
             {
                 case 1:
                 {
-                    String reader = "";
-                    while (reader != "ut")
-                    {
-                        Console.WriteLine("For å fiske skriv -> fisk \n" +
-                                      "For å gå tilbake skriv -> ut: ");
-                        reader = Console.ReadLine();
-                        if (reader.ToLower() == "fisk" )
-                        {
-                            Random rnd = new Random();
-                            int tilfeldig = rnd.Next(fiskeArter.Count);
-                            string valgtFisk = fiskeArter[tilfeldig];
-                    
-                            int Num = rnd.Next(1, 3);
-                            if (Num%2 == 0)
-                            {
-                                Console.WriteLine($"*Du fikk en {valgtFisk}!*");
-                            }
-                            else
-                            {
-                                Console.WriteLine("*Du fikk ingenting!*");
-                            }
-                        }
-                        else if (reader.ToLower() == "ut")
-                        {
-                            reader = "ut";
-                        }
-                        
-                    }
+                    fishing();
                     break;
                 }
                 case 2:
@@ -72,5 +36,38 @@ class Program
         Console.WriteLine("1. fisk \n" +
                           "2. Se i sekken \n" +
                           "3. Avslutt");
+    }
+
+    public static void fishing()
+    {
+        String reader = "";
+        while (reader != "ut")
+        {
+            Console.WriteLine("For å fiske skriv -> fisk \n" +
+                              "For å gå tilbake skriv -> ut: ");
+            reader = Console.ReadLine();
+            if (reader.ToLower() == "fisk" )
+            {
+                Random rnd = new Random();
+                FiskeArt[] alleFisker = Enum.GetValues<FiskeArt>();
+                int tilfeldig = rnd.Next(alleFisker.Length);
+                FiskeArt valgtFisk = alleFisker[tilfeldig];
+                    
+                int Num = rnd.Next(1, 3);
+                if (Num%2 == 0)
+                {
+                    Console.WriteLine($"*Du fikk en {valgtFisk}!*");
+                }
+                else
+                {
+                    Console.WriteLine("*Du fikk ingenting!*");
+                }
+            }
+            else if (reader.ToLower() == "ut")
+            {
+                reader = "ut";
+            }
+                        
+        }
     }
 }
