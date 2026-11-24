@@ -2,7 +2,6 @@
 
 class Program
 {
-    
     static void Main(String[] args)
     {
         Boolean kjorer = true;
@@ -49,13 +48,13 @@ class Program
             if (reader.ToLower() == "fisk" )
             {
                 Random rnd = new Random();
-                FiskeArt[] alleFisker = Enum.GetValues<FiskeArt>();
-                int tilfeldig = rnd.Next(alleFisker.Length);
-                FiskeArt valgtFisk = alleFisker[tilfeldig];
-                    
                 int Num = rnd.Next(1, 3);
+                
                 if (Num%2 == 0)
                 {
+                    FiskeArt[] alleFisker = Enum.GetValues<FiskeArt>();
+                    int tilfeldig = rnd.Next(alleFisker.Length);
+                    FiskeArt valgtFisk = alleFisker[tilfeldig];
                     Console.WriteLine($"*Du fikk en {valgtFisk}!*");
                 }
                 else
