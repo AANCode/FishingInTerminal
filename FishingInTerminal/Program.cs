@@ -4,21 +4,28 @@ class Program
 {
     static void Main(String[] args)
     {
+        List<String> mineFisker = new List<string>();
+        
         Boolean kjorer = true;
         while (kjorer)
         {
             printMenu();
+            
             Console.Write("Hva skal du gjøre?: ");
             int valg = int.Parse(Console.ReadLine());
             switch (valg)
             {
                 case 1:
                 {
-                    fishing();
+                    fishing(mineFisker);
                     break;
                 }
                 case 2:
                 {
+                    for (int i = 0; i < mineFisker.Count; i++)
+                    {
+                        Console.WriteLine($"{mineFisker[i]}");
+                    }
                     break;
                 }
                 case 3:
@@ -29,7 +36,7 @@ class Program
             }
         }
         
-    }  
+    }
     public static void printMenu()
     {
         Console.WriteLine("1. fisk \n" +
@@ -37,7 +44,7 @@ class Program
                           "3. Avslutt");
     }
 
-    public static void fishing()
+    public static void fishing(List<String> list)
     {
         String reader = "";
         while (reader != "ut")
@@ -56,6 +63,8 @@ class Program
                     int tilfeldig = rnd.Next(alleFisker.Length);
                     FiskeArt valgtFisk = alleFisker[tilfeldig];
                     Console.WriteLine($"*Du fikk en {valgtFisk}!*");
+                    
+                    list.Add(valgtFisk.ToString());
                 }
                 else
                 {
